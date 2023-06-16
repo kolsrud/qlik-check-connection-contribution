@@ -10,8 +10,20 @@ namespace QlikCheckConnectionContribution
     {
         static void Main(string[] args)
         {
-            var user = args[0];
-            var appId = args[1];
+            string user = null;
+            Guid appId = Guid.Empty;
+
+            try
+            {
+                user = args[0];
+                appId = new Guid(args[1]);
+            }
+            catch
+            {
+                WriteLine("Error parsing arguments.");
+                PrintUsage();
+                Environment.Exit(1);
+            }
 
             WriteLine($"Running test as user: {user}");
             WriteLine($"Connection to app:    {appId}");
@@ -46,10 +58,16 @@ namespace QlikCheckConnectionContribution
             WriteLine();
 
             WriteLine("**** Test Result Summary ***");
-            Console.WriteLine($"Time to open app test 1:   {tOpen1}");
-            Console.WriteLine($"Time to open app test 2:   {tOpen2} (diff from test1: {tOpen2 - tOpen1})");
-            Console.WriteLine($"Time to count connections: {tConnections}");
-            Console.WriteLine($"Estimated contribution from connection rules: {ComputePercentage(tOpen1, tOpen2):f1}%");
+            WriteLine($"Time to open app test 1:   {tOpen1}");
+            WriteLine($"Time to open app test 2:   {tOpen2} (diff from test1: {tOpen2 - tOpen1})");
+            WriteLine($"Time to count connections: {tConnections}");
+            WriteLine($"Estimated contribution from connection rules: {ComputePercentage(tOpen1, tOpen2):f1}%");
+        }
+
+        private static void PrintUsage()
+        {
+            WriteLine("Usage:   .\\QlikCheckConnectionContributions {USERDIR}\\{userid} {appId}");
+            WriteLine("Example: .\\QlikCheckConnectionContributions INTERNAL\\sa_api 4a03b166-af2c-4784-b17b-1b22dcf5ed4c");
         }
 
         private static double ComputePercentage(TimeSpan tOpen1, TimeSpan tOpen2)
