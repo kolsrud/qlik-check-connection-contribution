@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33723.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QlikCheckConnectionContribution", "QlikCheckConnectionContribution\QlikCheckConnectionContribution.csproj", "{CE97C6F8-F549-4DBF-ABA7-5FA0E7D000B7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CE97C6F8-F549-4DBF-ABA7-5FA0E7D000B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE97C6F8-F549-4DBF-ABA7-5FA0E7D000B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE97C6F8-F549-4DBF-ABA7-5FA0E7D000B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE97C6F8-F549-4DBF-ABA7-5FA0E7D000B7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {74E4F74D-45D4-4010-AE70-8D83D70717E0}
+	EndGlobalSection
+EndGlobal
