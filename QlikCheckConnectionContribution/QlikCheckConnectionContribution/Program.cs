@@ -110,8 +110,8 @@ namespace QlikCheckConnectionContribution
 
             var avg0 = TimeSpan.FromTicks(tTotal0.Ticks/(testCnt-1));
             var avg1 = TimeSpan.FromTicks(tTotal1.Ticks / (testCnt - 1));
-            WriteLine($"Time with data connections:    {tTotal0} (avg: {avg0}");
-            WriteLine($"Time without data connections: {tTotal1} (avg: {avg1}");
+            WriteLine($"Time with data connections:    {tTotal0} (avg: {avg0})");
+            WriteLine($"Time without data connections: {tTotal1} (avg: {avg1})");
             WriteLine($"Time diff:                     {tTotal0 - tTotal1}");
             WriteLine($"Avg diff:                      {avg0 - avg1}");
 		}
